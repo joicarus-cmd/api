@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Process Innovations | Transformación Digital con Humanidad</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#0D3B66;
+    --secondary:#0E8C7A;
+    --light:#f4f7fa;
+    --dark:#1a1a1a;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--light);
+    color:var(--dark);
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    height:65px;
+}
+
+.lang-btn{
+    background:white;
+    border:2px solid var(--primary);
+    padding:6px 14px;
+    border-radius:20px;
+    cursor:pointer;
+    font-weight:600;
+    color:var(--primary);
+    transition:0.3s;
+}
+
+.lang-btn:hover{
+    background:var(--primary);
+    color:white;
+}
+
+.hero{
+    padding:90px 0;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:2.4rem;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.15rem;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.cta{
+    background:var(--secondary);
+    color:white;
+    padding:14px 30px;
+    border:none;
+    border-radius:30px;
+    font-weight:600;
+    text-decoration:none;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.cta:hover{
+    background:#0a6f63;
+}
+
+.section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2rem;
+    color:var(--primary);
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:var(--secondary);
+    margin-bottom:15px;
+}
+
+.story{
+    background:var(--primary);
+    color:white;
+    padding:70px 0;
+    text-align:center;
+}
+
+.story p{
+    max-width:800px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+footer{
+    background:#0b2e4d;
+    color:white;
+    padding:40px 0;
+    text-align:center;
+    font-size:0.9rem;
+}
+
+footer a{
+    color:#3cd3c0;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:1.8rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<header>
+    <img src="logo.png" alt="API Logo" class="logo">
+    <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+</header>
+</div>
+
+<section class="hero">
+<div class="container">
+    <h1 
+        data-es="Transformación Digital con Humanidad"
+        data-en="Digital Transformation with Humanity">
+        Transformación Digital con Humanidad
+    </h1>
+
+    <p 
+        data-es="Convertimos operaciones tradicionales en sistemas modernos, ágiles y escalables. Transformamos datos en decisiones, procesos en resultados y empresas en organizaciones preparadas para su siguiente etapa de crecimiento."
+        data-en="We transform traditional operations into modern, agile and scalable systems. Turning data into decisions, processes into results, and companies into organizations ready for their next stage of growth.">
+        Convertimos operaciones tradicionales en sistemas modernos, ágiles y escalables.
+    </p>
+
+    <a href="mailto:jromero@advancedprocessinnovations.com"
+       class="cta"
+       data-es="Contáctanos"
+       data-en="Contact Us">
+       Contáctanos
+    </a>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<h2 class="section-title"
+data-es="Nuestros Servicios"
+data-en="Our Services">
+Nuestros Servicios
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Optimización y Rediseño de Procesos</h3>
+<p>BPM & Lean, eliminación de cuellos de botella y estandarización operativa.</p>
+</div>
+
+<div class="card">
+<h3>Transformación Digital</h3>
+<p>Implementación de CRM y ERP, automatización inteligente e integración entre sistemas.</p>
+</div>
+
+<div class="card">
+<h3>Sistemas Integrados de Gestión</h3>
+<p>ISO 9001, 45001, 14001, gestión de riesgos y cultura de prevención.</p>
+</div>
+
+<div class="card">
+<h3>Mejora Continua & Data-Driven</h3>
+<p>KPIs, dashboards y toma de decisiones basada en datos.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="story">
+<div class="container">
+<h2 
+data-es="Nuestra Propuesta de Valor"
+data-en="Our Value Proposition">
+Nuestra Propuesta de Valor
+</h2>
+
+<p 
+data-es="Somos el aliado que convierte la complejidad operativa en claridad estratégica. Llevamos a cada cliente del caos al control, de lo manual a lo digital y de lo reactivo a lo inteligente."
+data-en="We are the partner that turns operational complexity into strategic clarity. We take each client from chaos to control, from manual to digital, and from reactive to intelligent operations.">
+Somos el aliado que convierte la complejidad operativa en claridad estratégica.
+</p>
+
+<br><br>
+
+<a href="mailto:jromero@advancedprocessinnovations.com"
+class="cta"
+data-es="Descubre cómo podemos ayudarte"
+data-en="Discover how we can help you">
+Descubre cómo podemos ayudarte
+</a>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>Guayas, Ecuador</p>
+<p>Email: jromero@advancedprocessinnovations.com</p>
+<p>www.advancedprocessinnovations.com</p>
+<p>+593 986 451 823</p>
+</div>
+</footer>
+
+<script>
+function toggleLanguage(){
+    const elements = document.querySelectorAll('[data-es]');
+    const btn = document.querySelector('.lang-btn');
+    const currentLang = btn.textContent;
+
+    elements.forEach(el=>{
+        el.textContent = currentLang === "EN"
+        ? el.getAttribute("data-en")
+        : el.getAttribute("data-es");
+    });
+
+    btn.textContent = currentLang === "EN" ? "ES" : "EN";
+}
+</script>
+
+</body>
+</html>
