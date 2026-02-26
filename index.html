@@ -3,281 +3,345 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advanced Process Innovations | Transformación Digital con Humanidad</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>API | Transformación Digital con Humanidad</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
 :root{
-    --primary:#0D3B66;
-    --secondary:#0E8C7A;
-    --light:#f4f7fa;
-    --dark:#1a1a1a;
+--primary:#0D3B66;
+--secondary:#0E8C7A;
+--accent:#00c2a8;
+--light:#f4f7fa;
+--dark:#0b1e2e;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-    font-family:'Inter',sans-serif;
-    background:var(--light);
-    color:var(--dark);
-    line-height:1.6;
+font-family:'Inter',sans-serif;
+background:white;
+color:#222;
+scroll-behavior:smooth;
+}
+
+section{
+padding:100px 8%;
+position:relative;
+overflow:hidden;
+}
+
+h1,h2,h3{
+font-weight:800;
 }
 
 .container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
+max-width:1200px;
+margin:auto;
 }
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
+.btn{
+display:inline-block;
+padding:14px 32px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
 }
 
-.logo{
-    height:65px;
+.btn-primary{
+background:var(--accent);
+color:white;
 }
 
-.lang-btn{
-    background:white;
-    border:2px solid var(--primary);
-    padding:6px 14px;
-    border-radius:20px;
-    cursor:pointer;
-    font-weight:600;
-    color:var(--primary);
-    transition:0.3s;
+.btn-primary:hover{
+background:#00a892;
 }
 
-.lang-btn:hover{
-    background:var(--primary);
-    color:white;
+.fade-up{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
 }
+
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* HERO */
 
 .hero{
-    padding:90px 0;
-    text-align:center;
+background:url('hero-bg.jpg') center/cover no-repeat;
+color:white;
+text-align:center;
+padding:140px 8%;
+}
+
+.hero-overlay{
+background:rgba(0,0,0,0.65);
+position:absolute;
+top:0;left:0;right:0;bottom:0;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+margin:auto;
 }
 
 .hero h1{
-    font-size:2.4rem;
-    color:var(--primary);
-    margin-bottom:20px;
+font-size:3rem;
+margin-bottom:20px;
 }
 
 .hero p{
-    font-size:1.15rem;
-    max-width:700px;
-    margin:auto;
-    margin-bottom:30px;
+font-size:1.2rem;
+margin-bottom:30px;
 }
+
+/* METRICS */
+
+.metrics{
+background:var(--primary);
+color:white;
+text-align:center;
+}
+
+.metrics-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+}
+
+.metric h2{
+font-size:2.5rem;
+color:var(--accent);
+}
+
+/* ABOUT */
+
+.about{
+background:white;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
+
+/* SERVICES */
+
+.services{
+background:#f7fbfc;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+transition:.4s;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+}
+
+.service-card i{
+font-size:32px;
+color:var(--secondary);
+margin-bottom:15px;
+}
+
+/* CTA */
 
 .cta{
-    background:var(--secondary);
-    color:white;
-    padding:14px 30px;
-    border:none;
-    border-radius:30px;
-    font-weight:600;
-    text-decoration:none;
-    display:inline-block;
-    transition:0.3s;
-}
-
-.cta:hover{
-    background:#0a6f63;
-}
-
-.section{
-    padding:70px 0;
-}
-
-.section-title{
-    text-align:center;
-    font-size:2rem;
-    color:var(--primary);
-    margin-bottom:40px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.05);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card h3{
-    color:var(--secondary);
-    margin-bottom:15px;
-}
-
-.story{
-    background:var(--primary);
-    color:white;
-    padding:70px 0;
-    text-align:center;
-}
-
-.story p{
-    max-width:800px;
-    margin:auto;
-    font-size:1.1rem;
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:white;
+text-align:center;
 }
 
 footer{
-    background:#0b2e4d;
-    color:white;
-    padding:40px 0;
-    text-align:center;
-    font-size:0.9rem;
+background:#081621;
+color:white;
+text-align:center;
+padding:40px;
+font-size:.9rem;
 }
 
-footer a{
-    color:#3cd3c0;
-    text-decoration:none;
+/* RESPONSIVE */
+
+@media(max-width:900px){
+.about-grid{
+grid-template-columns:1fr;
+}
+.hero h1{
+font-size:2.2rem;
+}
 }
 
-@media(max-width:768px){
-    .hero h1{
-        font-size:1.8rem;
-    }
-}
 </style>
 </head>
 
 <body>
 
-<div class="container">
-<header>
-    <img src="logo.png" alt="API Logo" class="logo">
-    <button class="lang-btn" onclick="toggleLanguage()">EN</button>
-</header>
-</div>
-
+<!-- HERO -->
 <section class="hero">
-<div class="container">
-    <h1 
-        data-es="Transformación Digital con Humanidad"
-        data-en="Digital Transformation with Humanity">
-        Transformación Digital con Humanidad
-    </h1>
-
-    <p 
-        data-es="Convertimos operaciones tradicionales en sistemas modernos, ágiles y escalables. Transformamos datos en decisiones, procesos en resultados y empresas en organizaciones preparadas para su siguiente etapa de crecimiento."
-        data-en="We transform traditional operations into modern, agile and scalable systems. Turning data into decisions, processes into results, and companies into organizations ready for their next stage of growth.">
-        Convertimos operaciones tradicionales en sistemas modernos, ágiles y escalables.
-    </p>
-
-    <a href="mailto:jromero@advancedprocessinnovations.com"
-       class="cta"
-       data-es="Contáctanos"
-       data-en="Contact Us">
-       Contáctanos
-    </a>
+<div class="hero-overlay"></div>
+<div class="hero-content fade-up">
+<img src="logo.png" style="height:70px;margin-bottom:30px;">
+<h1>TRANSFORMACIÓN DIGITAL CON HUMANIDAD</h1>
+<p>INGENIERÍA, AGILIDAD, SEGURIDAD Y MEJORA CONTINUA</p>
+<a href="#contacto" class="btn btn-primary">Contáctanos</a>
 </div>
 </section>
 
-<section class="section">
-<div class="container">
+<!-- METRICS -->
+<section class="metrics">
+<div class="container metrics-grid fade-up">
+<div class="metric">
+<h2 data-target="10">0</h2>
+<p>Años de Experiencia</p>
+</div>
+<div class="metric">
+<h2 data-target="40">0</h2>
+<p>Aumento en Productividad (%)</p>
+</div>
+<div class="metric">
+<h2 data-target="100">0</h2>
+<p>Orientado a Resultados (%)</p>
+</div>
+</div>
+</section>
 
-<h2 class="section-title"
-data-es="Nuestros Servicios"
-data-en="Our Services">
-Nuestros Servicios
-</h2>
+<!-- ABOUT -->
+<section class="about">
+<div class="container about-grid">
+<div class="fade-up">
+<h2>¿Quiénes Somos?</h2>
+<p>En API, convertimos operaciones tradicionales en sistemas modernos, ágiles y escalables...</p>
 
-<div class="grid">
+<h3 style="margin-top:30px;">Nuestro Propósito</h3>
+<p>Acompañar a las empresas a convertirse en líderes operativos mediante tecnología accesible, ingeniería avanzada y estrategias que generan resultados medibles.</p>
 
-<div class="card">
-<h3>Optimización y Rediseño de Procesos</h3>
-<p>BPM & Lean, eliminación de cuellos de botella y estandarización operativa.</p>
+<h3 style="margin-top:30px;">Innovación Aplicada</h3>
+<p><i class="fa-solid fa-lightbulb"></i> No solo damos recomendaciones; acompañamos en la ejecución.</p>
+
+<h3 style="margin-top:20px;">Resultados Medibles</h3>
+<p>Reducción de costos, mejora de productividad y decisiones claras respaldadas por datos.</p>
 </div>
 
-<div class="card">
+<div class="fade-up">
+<img src="services-bg.jpg" alt="Technology Image">
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+<div class="container fade-up">
+<h2 style="text-align:center;margin-bottom:60px;">Nuestros Servicios</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+<i class="fa-solid fa-diagram-project"></i>
+<h3>Optimización de Procesos</h3>
+<p>BPM & Lean. Eliminación de desperdicios y flujos optimizados.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-microchip"></i>
 <h3>Transformación Digital</h3>
-<p>Implementación de CRM y ERP, automatización inteligente e integración entre sistemas.</p>
+<p>CRM, ERP, automatización e integración inteligente.</p>
 </div>
 
-<div class="card">
-<h3>Sistemas Integrados de Gestión</h3>
-<p>ISO 9001, 45001, 14001, gestión de riesgos y cultura de prevención.</p>
+<div class="service-card">
+<i class="fa-solid fa-people-arrows"></i>
+<h3>Gestión Ágil & PMO</h3>
+<p>Marcos ágiles e híbridos con control total de plazos y costos.</p>
 </div>
 
-<div class="card">
-<h3>Mejora Continua & Data-Driven</h3>
-<p>KPIs, dashboards y toma de decisiones basada en datos.</p>
+<div class="service-card">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Mejora Continua</h3>
+<p>KPIs accionables y dashboards en tiempo real.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Sistemas ISO & Riesgos</h3>
+<p>ISO 9001, 45001, 14001 y cultura preventiva.</p>
 </div>
 
 </div>
 </div>
 </section>
 
-<section class="story">
-<div class="container">
-<h2 
-data-es="Nuestra Propuesta de Valor"
-data-en="Our Value Proposition">
-Nuestra Propuesta de Valor
-</h2>
-
-<p 
-data-es="Somos el aliado que convierte la complejidad operativa en claridad estratégica. Llevamos a cada cliente del caos al control, de lo manual a lo digital y de lo reactivo a lo inteligente."
-data-en="We are the partner that turns operational complexity into strategic clarity. We take each client from chaos to control, from manual to digital, and from reactive to intelligent operations.">
-Somos el aliado que convierte la complejidad operativa en claridad estratégica.
-</p>
-
-<br><br>
-
-<a href="mailto:jromero@advancedprocessinnovations.com"
-class="cta"
-data-es="Descubre cómo podemos ayudarte"
-data-en="Discover how we can help you">
-Descubre cómo podemos ayudarte
-</a>
-
+<!-- CTA -->
+<section class="cta" id="contacto">
+<div class="fade-up">
+<h2>Impulsa tu empresa hacia su siguiente nivel</h2>
+<br>
+<a href="mailto:jromero@advancedprocessinnovations.com" class="btn btn-primary">Hablemos</a>
 </div>
 </section>
 
 <footer>
-<div class="container">
-<p>Guayas, Ecuador</p>
-<p>Email: jromero@advancedprocessinnovations.com</p>
-<p>www.advancedprocessinnovations.com</p>
-<p>+593 986 451 823</p>
-</div>
+Guayas, Ecuador | jromero@advancedprocessinnovations.com | +593 986 451 823
 </footer>
 
 <script>
-function toggleLanguage(){
-    const elements = document.querySelectorAll('[data-es]');
-    const btn = document.querySelector('.lang-btn');
-    const currentLang = btn.textContent;
 
-    elements.forEach(el=>{
-        el.textContent = currentLang === "EN"
-        ? el.getAttribute("data-en")
-        : el.getAttribute("data-es");
-    });
+/* Scroll animation */
+const faders = document.querySelectorAll('.fade-up');
+const appearOptions = { threshold:0.2 };
 
-    btn.textContent = currentLang === "EN" ? "ES" : "EN";
+const appearOnScroll = new IntersectionObserver(function(entries,observer){
+entries.forEach(entry=>{
+if(!entry.isIntersecting) return;
+entry.target.classList.add('show');
+observer.unobserve(entry.target);
+});
+},appearOptions);
+
+faders.forEach(fader=>appearOnScroll.observe(fader));
+
+/* Counter animation */
+const counters = document.querySelectorAll('[data-target]');
+counters.forEach(counter=>{
+const update = ()=>{
+const target = +counter.getAttribute('data-target');
+const count = +counter.innerText;
+const increment = target / 60;
+if(count < target){
+counter.innerText = Math.ceil(count + increment);
+setTimeout(update,20);
+}else{
+counter.innerText = target;
 }
+};
+update();
+});
+
 </script>
 
 </body>
