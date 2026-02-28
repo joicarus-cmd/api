@@ -1,402 +1,261 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>API | Transformación Digital con Humanidad</title>
+<title>Advanced Process Innovations | Industrial Transformation for U.S. Growth</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
 :root{
 --primary:#0D3B66;
---secondary:#0E8C7A;
---accent:#00c2a8;
---dark:#081621;
+--dark:#050A0F;
+--light:#F5F7FA;
+--accent:#0E8C7A;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
-
+html{scroll-behavior:smooth;}
 body{
 font-family:'Inter',sans-serif;
-color:#222;
-scroll-behavior:smooth;
-line-height:1.6;
+color:#111;
+background:white;
+line-height:1.8;
+overflow-x:hidden;
 }
 
-section{
-padding:110px 8%;
-}
+section{padding:140px 8%;}
+.container{max-width:1100px;margin:auto;}
 
-.container{
-max-width:1200px;
-margin:auto;
-}
-
-/* HERO */
-
-.hero{
-position:relative;
-background:url('hero-bg.jpg') center/cover no-repeat;
-color:white;
-text-align:center;
-padding:170px 8%;
-overflow:hidden;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-top:0;left:0;right:0;bottom:0;
-background:rgba(13,59,102,0.85);
-backdrop-filter:blur(4px);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-max-width:900px;
-margin:auto;
-}
-
-.hero h1{
-font-size:3rem;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:1.2rem;
-margin-bottom:30px;
-}
+h1,h2,h3{font-weight:800;letter-spacing:-.6px;}
+p{color:#555;font-size:1.05rem;}
+.center{text-align:center;}
 
 .btn{
 display:inline-block;
-padding:14px 34px;
-border-radius:40px;
-background:var(--accent);
+padding:14px 30px;
+background:var(--primary);
 color:white;
 text-decoration:none;
 font-weight:600;
-transition:.3s;
+border-radius:30px;
+transition:.4s ease;
+}
+.btn:hover{background:var(--accent);transform:translateY(-3px);}
+
+/* NAV */
+nav{
+position:fixed;width:100%;padding:25px 8%;
+display:flex;justify-content:space-between;align-items:center;
+background:rgba(255,255,255,.85);backdrop-filter:blur(10px);
+z-index:1000;
+}
+nav img{height:55px;}
+
+/* HERO */
+.hero{
+height:100vh;display:flex;align-items:center;justify-content:center;
+text-align:center;
+background:linear-gradient(rgba(5,10,15,.75), rgba(5,10,15,.75)),
+url('hero-bg.jpg') center/cover fixed no-repeat;
+color:white;
+}
+.hero h1{font-size:3rem;max-width:900px;margin-bottom:30px;}
+.hero p{max-width:700px;margin:auto;color:#d9e2ec;margin-bottom:40px;}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:40px;
+margin-top:60px;
 }
 
-.btn:hover{
-background:#00a892;
+.card{
+background:white;
+padding:35px;
+border-radius:18px;
+box-shadow:0 20px 60px rgba(0,0,0,.07);
+transition:.4s ease;
 }
+.card:hover{transform:translateY(-6px);}
+.card h3{margin-bottom:15px;color:var(--primary);}
+
+/* DARK */
+.dark{background:var(--dark);color:white;text-align:center;}
+.dark p{color:#c7d4df;}
 
 /* METRICS */
+.metrics{display:flex;justify-content:center;gap:100px;margin-top:80px;flex-wrap:wrap;}
+.metric h2{font-size:3rem;}
+.metric span{display:block;margin-top:10px;color:#a8bac8;}
 
-.metrics{
-background:var(--primary);
-color:white;
-text-align:center;
+/* CONTACT */
+.contact-section{
+background:linear-gradient(135deg,#0D3B66,#0A2239);
+color:white;text-align:center;
 }
-
-.metrics-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:40px;
+.contact-box{
+background:white;padding:50px;border-radius:20px;
+box-shadow:0 40px 100px rgba(0,0,0,0.3);
+max-width:900px;margin:60px auto 0 auto;
 }
+.contact-box p{font-size:.85rem;color:#555;margin-top:20px;}
 
-.metric h2{
-font-size:2.5rem;
-color:var(--accent);
+/* PRIVACY */
+.privacy{
+background:#f4f6f9;
 }
-
-/* QUIENES SOMOS */
-
-.about{
-text-align:center;
-max-width:900px;
-margin:auto;
-}
-
-.about p{
-margin-top:25px;
-font-size:1.05rem;
-}
-
-/* VALUE CARDS */
-
-.values{
-margin-top:70px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.value-card{
-background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.07);
-transition:.4s;
-}
-
-.value-card:hover{
-transform:translateY(-8px);
-}
-
-.value-card i{
-font-size:32px;
-color:var(--secondary);
-margin-bottom:18px;
-}
-
-/* SERVICES SECTION */
-
-.services{
-position:relative;
-background:url('services-bg.jpg') center/cover no-repeat;
-color:white;
-}
-
-.services::before{
-content:"";
-position:absolute;
-top:0;left:0;right:0;bottom:0;
-background:rgba(13,59,102,0.88);
-}
-
-.services-content{
-position:relative;
-z-index:2;
-}
-
-.services-header{
-text-align:center;
-max-width:700px;
-margin:0 auto 70px auto;
-}
-
-.services-header h2{
-font-size:2.3rem;
-margin-bottom:15px;
-}
-
-.services-header p{
-color:#cfe6f3;
-font-size:1.05rem;
-}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-.service-card{
-background:white;
-color:#222;
-padding:35px;
-border-radius:20px;
-box-shadow:0 20px 50px rgba(0,0,0,.15);
-transition:.4s;
-}
-
-.service-card:hover{
-transform:translateY(-10px);
-}
-
-.service-card i{
-font-size:30px;
-color:var(--secondary);
-margin-bottom:18px;
-}
-
-.service-card h3{
-margin-bottom:15px;
-color:var(--primary);
-}
-
-.service-card ul{
-padding-left:18px;
-margin-top:10px;
-}
-
-.service-card ul li{
-margin-bottom:6px;
-font-size:.95rem;
-}
-
-/* CTA */
-
-.cta{
-background:linear-gradient(135deg,var(--primary),var(--secondary));
-color:white;
-text-align:center;
-}
+.privacy h2{margin-bottom:30px;}
 
 /* FOOTER */
-
 footer{
-background:var(--dark);
-color:white;
-text-align:center;
-padding:40px;
-font-size:.9rem;
+background:#000;color:#777;text-align:center;
+padding:60px 20px;font-size:.85rem;
 }
-
-/* RESPONSIVE */
 
 @media(max-width:900px){
-.hero h1{
-font-size:2.2rem;
+.hero h1{font-size:2.1rem;}
+section{padding:110px 8%;}
 }
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<nav>
+<img src="logo.png" alt="API Logo">
+<a href="#contact" class="btn">Executive Contact</a>
+</nav>
+
 <section class="hero">
-<div class="hero-content">
-<img src="logo.png" style="height:70px;margin-bottom:30px;">
-<h1>TRANSFORMACIÓN DIGITAL CON HUMANIDAD</h1>
-<p>INGENIERÍA, AGILIDAD, SEGURIDAD Y MEJORA CONTINUA</p>
-<a href="#contacto" class="btn">Contáctanos</a>
-</div>
-</section>
-
-<!-- METRICS -->
-<section class="metrics">
-<div class="container metrics-grid">
-<div class="metric">
-<h2>+10</h2>
-<p>Años de Experiencia</p>
-</div>
-<div class="metric">
-<h2>20–40%</h2>
-<p>Aumento en Productividad</p>
-</div>
-<div class="metric">
-<h2>100%</h2>
-<p>Orientado a Resultados</p>
-</div>
-</div>
-</section>
-
-<!-- QUIENES SOMOS + CARDS -->
-<section>
 <div class="container">
-
-<div class="about">
-<h2>¿Quiénes Somos?</h2>
+<h1>America’s Industrial Growth Requires Operational Strength.</h1>
 <p>
-En API, convertimos operaciones tradicionales en sistemas modernos, ágiles y escalables. 
-Somos especialistas en optimización de procesos, transformación digital, seguridad, mejora continua, 
-y gestión de proyectos, orientados a impulsar el crecimiento de las empresas. 
-Transformamos datos en decisiones, procesos en resultados y empresas en organizaciones preparadas 
-para su siguiente etapa de crecimiento.
+Advanced Process Innovations supports U.S. manufacturers by designing scalable operational systems,
+integrating digital technologies, and implementing performance frameworks that enhance productivity,
+resilience, and long-term competitiveness.
+</p>
+<a href="#contact" class="btn">Schedule Strategic Consultation</a>
+</div>
+</section>
+
+<section class="center">
+<div class="container">
+<h2>Strengthening U.S. Industrial Competitiveness</h2>
+<br>
+<p>
+Small and mid-sized U.S. manufacturers face global competition,
+workforce constraints, and fragmented digital systems.
+Operational architecture is essential to sustaining industrial leadership.
 </p>
 </div>
-
-<div class="values">
-
-<div class="value-card">
-<i class="fa-solid fa-bullseye"></i>
-<h3>Nuestro Propósito</h3>
-<p>Acompañar a las empresas a convertirse en líderes operativos mediante tecnología accesible, ingeniería avanzada y estrategias que generan resultados medibles.</p>
-</div>
-
-<div class="value-card">
-<i class="fa-solid fa-lightbulb"></i>
-<h3>Innovación Aplicada</h3>
-<p>No solo damos recomendaciones; acompañamos en la ejecución. Implementamos soluciones tecnológicas escalables y sin fricción.</p>
-</div>
-
-<div class="value-card">
-<i class="fa-solid fa-chart-line"></i>
-<h3>Resultados Medibles</h3>
-<p>Reducción de costos, mejora de productividad y decisiones respaldadas por datos.</p>
-</div>
-
-</div>
-
-</div>
 </section>
 
-<!-- SERVICIOS -->
-<section class="services">
-<div class="services-content container">
-
-<div class="services-header">
-<h2>Nuestros Servicios</h2>
-<p>Soluciones integrales para transformar tu empresa en un líder operativo.</p>
-</div>
-
-<div class="services-grid">
-
-<div class="service-card">
-<i class="fa-solid fa-diagram-project"></i>
-<h3>Optimización y Rediseño de Procesos</h3>
-<ul>
-<li>BPM & Lean</li>
-<li>Eliminación de desperdicios</li>
-<li>Flujos optimizados</li>
-<li>Mayor eficiencia</li>
-</ul>
-</div>
-
-<div class="service-card">
-<i class="fa-solid fa-microchip"></i>
-<h3>Transformación Digital</h3>
-<ul>
-<li>CRM y ERP</li>
-<li>Automatización inteligente</li>
-<li>Integración de sistemas</li>
-</ul>
-</div>
-
-<div class="service-card">
-<i class="fa-solid fa-people-arrows"></i>
-<h3>Gestión Ágil & PMO</h3>
-<ul>
-<li>Marcos ágiles e híbridos</li>
-<li>Control de plazos y costos</li>
-<li>Acompañamiento integral</li>
-</ul>
-</div>
-
-<div class="service-card">
-<i class="fa-solid fa-chart-line"></i>
-<h3>Mejora Continua & Data</h3>
-<ul>
-<li>KPIs accionables</li>
-<li>Dashboards en tiempo real</li>
-<li>Decisiones basadas en datos</li>
-</ul>
-</div>
-
-<div class="service-card">
-<i class="fa-solid fa-shield-halved"></i>
-<h3>Sistemas ISO & Riesgos</h3>
-<ul>
-<li>ISO 9001, 45001, 14001</li>
-<li>Cultura de prevención</li>
-<li>Gestión de riesgos</li>
-</ul>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- CTA -->
-<section class="cta" id="contacto">
+<!-- INDUSTRIES -->
+<section class="center">
 <div class="container">
-<h2>Impulsa tu empresa hacia su siguiente nivel</h2>
+<h2>Industries We Support</h2>
+
+<div class="grid">
+<div class="card"><h3>Manufacturing</h3></div>
+<div class="card"><h3>Food & Beverage</h3></div>
+<div class="card"><h3>Automotive & Auto Parts</h3></div>
+<div class="card"><h3>Industrial & Metalworking</h3></div>
+<div class="card"><h3>Logistics & Distribution</h3></div>
+<div class="card"><h3>Technology Startups</h3></div>
+</div>
+
+</div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="dark">
+<div class="container">
+<h2>Operational Architecture Framework</h2>
 <br>
-<a href="mailto:jromero@advancedprocessinnovations.com" class="btn">Hablemos</a>
+<p>
+Our methodology integrates process engineering, digital enablement,
+governance systems, and performance measurement into a unified operational model.
+</p>
+</div>
+</section>
+
+<!-- MODEL -->
+<section class="center">
+<div class="container">
+<h2>Execution Model</h2>
+<div class="grid">
+<div class="card"><h3>1. Diagnose</h3><p>Operational mapping & data analysis.</p></div>
+<div class="card"><h3>2. Design</h3><p>Structured system architecture & digital integration.</p></div>
+<div class="card"><h3>3. Deploy</h3><p>Implementation with KPI tracking.</p></div>
+<div class="card"><h3>4. Sustain</h3><p>Continuous improvement & governance control.</p></div>
+</div>
+</div>
+</section>
+
+<section class="dark">
+<div class="container">
+<h2>Impact at Scale</h2>
+<div class="metrics">
+<div class="metric"><h2>10+</h2><span>Years Industrial Leadership</span></div>
+<div class="metric"><h2>20–40%</h2><span>Productivity Gains</span></div>
+<div class="metric"><h2>100%</h2><span>Execution-Oriented</span></div>
+</div>
+</div>
+</section>
+
+<section class="center">
+<div class="container">
+<h2>Founder</h2>
+<p>
+Industrial Engineer with extensive experience in process optimization,
+digital systems implementation, safety, quality management, and agile execution.
+</p>
+<br>
+<a href="https://www.linkedin.com/in/alberticoromero/" target="_blank" class="btn">
+View LinkedIn Profile
+</a>
+</div>
+</section>
+
+<section class="contact-section" id="contact">
+<div class="container">
+<h2>Executive Consultation</h2>
+<p>Request a confidential strategic assessment.</p>
+
+<div class="contact-box">
+<iframe width="100%" height="650px"
+src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAaNd4u5UN1pRR1VBNFVHTEZLNTU4VU9UODhRVEdRWC4u&embed=true"
+frameborder="0"
+style="border:none;border-radius:12px;" allowfullscreen>
+</iframe>
+
+<p>
+By submitting this form, you agree to our <a href="#privacy">Privacy Policy</a>.
+</p>
+</div>
+</div>
+</section>
+
+<!-- PRIVACY POLICY -->
+<section class="privacy" id="privacy">
+<div class="container">
+<h2>Privacy Policy</h2>
+<p>
+Advanced Process Innovations collects contact information solely
+for the purpose of responding to consultation requests.
+We do not sell or share personal data with third parties.
+Information is stored securely and may be deleted upon written request.
+For privacy-related inquiries, contact:
+jromero@advancedprocessinnovations.com
+</p>
 </div>
 </section>
 
 <footer>
-Guayas, Ecuador | jromero@advancedprocessinnovations.com | +593 986 451 823
+Advanced Process Innovations © 2026 | Strategic Industrial Transformation
 </footer>
 
 </body>
