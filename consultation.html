@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Schedule Consultation | API</title>
+<title>Schedule Consultation | Advanced Process Innovations</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -12,16 +12,22 @@
 --dark:#0A0F1A;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
 font-family:'Inter',sans-serif;
 background:var(--dark);
 color:white;
+display:flex;
+flex-direction:column;
+min-height:100vh;
 }
 
-section{padding:140px 8%;}
-.container{max-width:900px;margin:auto;text-align:center;}
-
+/* NAV */
 nav{
 position:fixed;
 width:100%;
@@ -30,16 +36,71 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 background:rgba(10,15,26,.95);
+z-index:1000;
 }
 
-nav img{height:45px;}
+nav img{
+height:45px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+/* MAIN CONTENT */
+main{
+flex:1;
+padding:160px 8% 80px 8%;
+}
+
+.container{
+max-width:950px;
+margin:auto;
+text-align:center;
+}
+
+h1{
+font-weight:800;
+margin-bottom:20px;
+}
+
+p{
+color:#c7d4df;
+margin-bottom:40px;
+}
 
 .form-box{
 background:white;
 padding:40px;
 border-radius:16px;
 box-shadow:0 40px 100px rgba(0,0,0,.4);
-margin-top:40px;
+}
+
+/* FOOTER */
+footer{
+background:#050A0F;
+text-align:center;
+padding:40px 20px;
+color:#777;
+font-size:.9rem;
+}
+
+footer a{
+color:#aaa;
+text-decoration:none;
+margin-left:10px;
+}
+
+footer a:hover{
+color:white;
+}
+
+@media(max-width:768px){
+main{
+padding:140px 5% 60px 5%;
+}
 }
 </style>
 </head>
@@ -48,14 +109,17 @@ margin-top:40px;
 
 <nav>
 <img src="logo.png" alt="API Logo">
-<a href="index.html" style="color:white;text-decoration:none;">Home</a>
+<a href="index.html">Home</a>
 </nav>
 
-<section>
+<main>
 <div class="container">
+
 <h1>Confidential Executive Consultation</h1>
-<p style="color:#c7d4df;margin-bottom:40px;">
-This consultation evaluates operational structure and identifies high-impact transformation opportunities.
+
+<p>
+This consultation evaluates operational structure, identifies systemic inefficiencies,
+and explores high-impact transformation opportunities for industrial and healthcare organizations.
 </p>
 
 <div class="form-box">
@@ -70,10 +134,12 @@ allowfullscreen>
 </div>
 
 </div>
-</section>
+</main>
+
 <footer>
 © 2026 Advanced Process Innovations, LLC |
 <a href="privacy.html">Privacy Policy</a>
 </footer>
+
 </body>
 </html>
