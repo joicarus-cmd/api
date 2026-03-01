@@ -3,121 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advanced Process Innovations | Industrial Transformation for U.S. Growth</title>
-
+<title>Advanced Process Innovations | Operational Strategy & Healthcare Systems</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
 --primary:#0D3B66;
---dark:#050A0F;
---light:#F5F7FA;
+--dark:#0A0F1A;
 --accent:#0E8C7A;
+--light:#F5F7FA;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
 body{
 font-family:'Inter',sans-serif;
-color:#111;
-background:white;
-line-height:1.8;
-overflow-x:hidden;
+background:var(--dark);
+color:white;
+line-height:1.7;
 }
 
-section{padding:140px 8%;}
-.container{max-width:1100px;margin:auto;}
-
-h1,h2,h3{font-weight:800;letter-spacing:-.6px;}
-p{color:#555;font-size:1.05rem;}
-.center{text-align:center;}
+section{padding:120px 8%;}
+.container{max-width:1150px;margin:auto;}
+h1,h2,h3{font-weight:800;}
+p{color:#c7d4df;font-size:1.05rem;}
 
 .btn{
 display:inline-block;
-padding:14px 30px;
-background:var(--primary);
-color:white;
+padding:14px 28px;
+border-radius:30px;
 text-decoration:none;
 font-weight:600;
-border-radius:30px;
-transition:.4s ease;
+transition:.3s ease;
 }
-.btn:hover{background:var(--accent);transform:translateY(-3px);}
+
+.btn-primary{
+background:var(--primary);
+color:white;
+}
+
+.btn-outline{
+border:1px solid white;
+color:white;
+}
+
+.btn:hover{opacity:.85;}
 
 /* NAV */
 nav{
-position:fixed;width:100%;padding:25px 8%;
-display:flex;justify-content:space-between;align-items:center;
-background:rgba(255,255,255,.85);
-backdrop-filter:blur(10px);
+position:fixed;
+width:100%;
+padding:25px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(10,15,26,.9);
 z-index:1000;
 }
-nav img{height:55px;}
 
 /* HERO */
 .hero{
-height:100vh;display:flex;align-items:center;justify-content:center;
-text-align:center;
-background:linear-gradient(rgba(5,10,15,.75), rgba(5,10,15,.75)),
-url('hero-bg.jpg') center/cover fixed no-repeat;
-color:white;
+height:100vh;
+display:flex;
+align-items:center;
+text-align:left;
+background:linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('services-bg.jpg') center/cover no-repeat;
 }
-.hero h1{font-size:3rem;max-width:900px;margin-bottom:30px;}
-.hero p{max-width:700px;margin:auto;color:#d9e2ec;margin-bottom:40px;}
+
+.hero-content{max-width:750px;}
+.hero h1{font-size:3.2rem;margin-bottom:25px;}
+.hero p{margin-bottom:40px;}
 
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:40px;
 margin-top:60px;
 }
 
 .card{
-background:white;
-padding:35px;
-border-radius:18px;
-box-shadow:0 20px 60px rgba(0,0,0,.07);
-transition:.4s ease;
+background:#111827;
+padding:40px;
+border-radius:16px;
+transition:.3s;
 }
+
 .card:hover{transform:translateY(-6px);}
-.card h3{margin-bottom:15px;color:var(--primary);}
 
-/* DARK */
-.dark{background:var(--dark);color:white;text-align:center;}
-.dark p{color:#c7d4df;}
-
-/* METRICS */
-.metrics{display:flex;justify-content:center;gap:100px;margin-top:80px;flex-wrap:wrap;}
-.metric h2{font-size:3rem;}
-.metric span{display:block;margin-top:10px;color:#a8bac8;}
-
-/* CONTACT */
-.contact-section{
-background:linear-gradient(135deg,#0D3B66,#0A2239);
-color:white;text-align:center;
+/* DARK ALT */
+.alt{
+background:#111827;
 }
-.contact-box{
-background:white;padding:50px;border-radius:20px;
-box-shadow:0 40px 100px rgba(0,0,0,0.3);
-max-width:900px;margin:60px auto 0 auto;
+
+/* LEADERSHIP */
+.leadership{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
 }
-.contact-box p{font-size:.85rem;color:#555;margin-top:20px;}
+
+.leadership img{
+width:100%;
+border-radius:16px;
+}
+
+/* CTA */
+.cta{
+text-align:center;
+background:var(--primary);
+}
 
 footer{
-background:#000;color:#777;text-align:center;
-padding:60px 20px;font-size:.85rem;
-}
-
-footer a{
-color:#aaa;
-text-decoration:none;
-margin:0 10px;
-}
-
-@media(max-width:900px){
-.hero h1{font-size:2.1rem;}
-section{padding:110px 8%;}
+background:#050A0F;
+text-align:center;
+padding:50px;
+color:#777;
+font-size:.9rem;
 }
 </style>
 </head>
@@ -125,119 +127,100 @@ section{padding:110px 8%;}
 <body>
 
 <nav>
-<img src="logo.png" alt="API Logo">
-<a href="#contact" class="btn">Executive Contact</a>
+<h3>API</h3>
+<div>
+<a href="executive.html" class="btn btn-outline">Executive Brief</a>
+<a href="consultation.html" class="btn btn-primary">Schedule Consultation</a>
+</div>
 </nav>
 
 <section class="hero">
-<div class="container">
-<h1>America’s Industrial Growth Requires Operational Strength.</h1>
+<div class="container hero-content">
+<h1>Designing Operational Systems for Industrial & Healthcare Excellence</h1>
 <p>
-Advanced Process Innovations supports U.S. manufacturers by designing scalable operational systems,
-integrating digital technologies, and implementing performance frameworks that enhance productivity,
-resilience, and long-term competitiveness.
+API partners with CEOs to transform fragmented operations into scalable,
+digitally-enabled, performance-driven systems across manufacturing and private healthcare.
 </p>
-<a href="#contact" class="btn">Schedule Strategic Consultation</a>
+<a href="consultation.html" class="btn btn-primary">Request Strategic Assessment</a>
 </div>
 </section>
 
-<section class="center">
+<section>
 <div class="container">
-<h2>Strengthening U.S. Industrial Competitiveness</h2>
-<br>
-<p>
-Small and mid-sized U.S. manufacturers face global competition,
-workforce constraints, and fragmented digital systems.
-Operational architecture is essential to sustaining industrial leadership.
-</p>
-</div>
-</section>
-
-<section class="center">
-<div class="container">
-<h2>Industries We Support</h2>
+<h2>What We Do</h2>
 <div class="grid">
-<div class="card"><h3>Manufacturing</h3></div>
-<div class="card"><h3>Food & Beverage</h3></div>
-<div class="card"><h3>Automotive & Auto Parts</h3></div>
-<div class="card"><h3>Industrial & Metalworking</h3></div>
-<div class="card"><h3>Logistics & Distribution</h3></div>
-<div class="card"><h3>Technology Startups</h3></div>
+<div class="card">
+<h3>Industrial Operations Transformation</h3>
+<p>Process architecture, lean systems, digital integration and performance governance for mid-sized manufacturers.</p>
+</div>
+<div class="card">
+<h3>Healthcare Operations Excellence</h3>
+<p>Clinical workflow redesign, capacity optimization, administrative systems and hospital performance strategy.</p>
+</div>
+<div class="card">
+<h3>Digital & Performance Systems</h3>
+<p>Custom operational applications, KPI dashboards, automation and data-driven decision frameworks.</p>
+</div>
 </div>
 </div>
 </section>
 
-<section class="dark">
+<section class="alt">
 <div class="container">
-<h2>Operational Architecture Framework</h2>
+<h2>Representative Engagement</h2>
+<p><strong>Agricultural Operations Digitalization – Latin America</strong></p>
 <p>
-Our methodology integrates process engineering, digital enablement,
-governance systems, and performance measurement into a unified operational model.
+Led the design and deployment of a custom application for a large-scale banana estate,
+centralizing labor, production tracking and management reporting.
+</p>
+<p><strong>Impact:</strong> Increased operational visibility, reduced manual reporting, accelerated executive decisions.</p>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Leadership</h2>
+
+<div class="leadership">
+
+<div>
+<img src="johnny.jpg" alt="Johnny Romero">
+<h3>Johnny A. Romero Loor</h3>
+<p><strong>Founder & Managing Director</strong></p>
+<p>
+Industrial Engineer (ESPOL), Executive Master’s in Quality & Safety Management.
+Certified in Agile, Digital Transformation and Operational Systems.
+Johnny leads API with a systems-based philosophy focused on scalable architecture,
+digital enablement and measurable execution.
 </p>
 </div>
-</section>
 
-<section class="center">
-<div class="container">
-<h2>Execution Model</h2>
-<div class="grid">
-<div class="card"><h3>1. Diagnose</h3><p>Operational mapping & data analysis.</p></div>
-<div class="card"><h3>2. Design</h3><p>System architecture & digital integration.</p></div>
-<div class="card"><h3>3. Deploy</h3><p>Implementation with KPI tracking.</p></div>
-<div class="card"><h3>4. Sustain</h3><p>Continuous improvement & governance control.</p></div>
-</div>
-</div>
-</section>
-
-<section class="dark">
-<div class="container">
-<h2>Impact at Scale</h2>
-<div class="metrics">
-<div class="metric"><h2>10+</h2><span>Years Industrial Leadership</span></div>
-<div class="metric"><h2>20–40%</h2><span>Productivity Gains</span></div>
-<div class="metric"><h2>100%</h2><span>Execution-Oriented</span></div>
-</div>
-</div>
-</section>
-
-<section class="center">
-<div class="container">
-<h2>Founder</h2>
+<div>
+<h3>Maribel Romero</h3>
+<p><strong>Partner – Healthcare Operations</strong></p>
 <p>
-Industrial Engineer specializing in operational systems, digital transformation,
-quality management, occupational safety, and agile project leadership.
+Economist with 20 years of experience in hospital administration and healthcare systems.
+Former leadership roles at Hospital Luis Vernaza and currently Administrative Manager
+for a third-level hospital development project.
+Specialist in high-demand clinical operations, resource optimization and hospital governance systems.
 </p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+<h2>Confidential Executive Consultation</h2>
+<p>Private strategic assessment for CEOs seeking operational clarity and scalable systems.</p>
 <br>
-<a href="https://www.linkedin.com/in/alberticoromero/" target="_blank" class="btn">
-View LinkedIn Profile
-</a>
-</div>
-</section>
-
-<section class="contact-section" id="contact">
-<div class="container">
-<h2>Executive Consultation</h2>
-<p>Request a confidential strategic assessment.</p>
-
-<div class="contact-box">
-<iframe width="100%" height="650px"
-src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAaNd4u5UN1pRR1VBNFVHTEZLNTU4VU9UODhRVEdRWC4u&embed=true"
-frameborder="0"
-style="border:none;border-radius:12px;" allowfullscreen>
-</iframe>
-
-<p>
-By submitting this form, you agree to our 
-<a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
-</p>
-</div>
+<a href="consultation.html" class="btn btn-outline">Schedule Consultation</a>
 </div>
 </section>
 
 <footer>
-Advanced Process Innovations © 2026 |
-<a href="privacy-policy.html">Privacy Policy</a> |
-<a href="https://www.linkedin.com/in/alberticoromero/" target="_blank">LinkedIn</a>
+Advanced Process Innovations © 2026 | Strategic Operational Systems
 </footer>
 
 </body>
