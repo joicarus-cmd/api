@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Process Innovations | Operational Systems for U.S. Manufacturing SMEs</title>
+<meta name="description" content="API designs scalable operational systems for U.S. mid-sized manufacturing companies.">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+<a href="index.html"><img src="logo.png" alt="API Logo"></a>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+<div class="nav-menu" id="navMenu">
+<a href="#who">Who We Are</a>
+<a href="#solutions">Solutions</a>
+<a href="#founder">Founder</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Designing Scalable Operational Systems for U.S. Manufacturing SMEs</h1>
+<p>We architect structured, measurable and future-ready operational ecosystems for mid-sized American manufacturers.</p>
+<a href="contact.html" class="btn-primary">Schedule a Strategic Consultation</a>
+</div>
+</section>
+
+<section id="who">
+<h2>Who We Are</h2>
+<p style="max-width:900px; margin-top:30px;">
+At API, we transform traditional operations into modern, agile, and scalable systems.
+We specialize in process optimization, digital transformation, occupational health and safety (OHS), continuous improvement, and project management—focused on driving sustainable business growth.
+</p>
+<p style="max-width:900px; margin-top:20px;">
+We turn data into decisions, processes into measurable results, and companies into organizations ready for their next stage of growth.
+</p>
+</section>
+
+<section id="solutions">
+<h2>Strategic Solutions</h2>
+<div class="solutions-grid">
+<div class="card"><h3>Process Optimization</h3><p>Lean and Six Sigma methodologies applied at system level.</p></div>
+<div class="card"><h3>Digital Transformation</h3><p>IIoT, AI and automation integration into cohesive operational systems.</p></div>
+<div class="card"><h3>Sustainability & OHS</h3><p>Regulatory alignment and sustainable operational frameworks.</p></div>
+</div>
+</section>
+
+<section>
+<h2>Executive Track Record</h2>
+<div class="metrics-grid">
+<div class="card"><h3>40% Automation Increase</h3></div>
+<div class="card"><h3>25% Retention Growth</h3></div>
+<div class="card"><h3>100% Regulatory Compliance</h3></div>
+<div class="card"><h3>20% Sales Growth Projection</h3></div>
+</div>
+</section>
+
+<section id="founder" class="founder">
+<h2>Founder</h2>
+<p style="margin-top:20px;">
+Industrial Engineer (ESPOL). Executive Master’s in Quality & Safety Management. Certified in Agile, Digital Transformation and Operational Systems.
+</p>
+<p style="margin-top:20px;">
+Leads API with a systems-based philosophy focused on scalable architecture and measurable execution.
+</p>
+</section>
+
+<section style="text-align:center;">
+<h2>Ready to Modernize Your Operational Architecture?</h2>
+<br>
+<a href="contact.html" class="btn-primary">Request a Strategic Assessment</a>
+</section>
+
+<footer>
+<p>© 2026 Advanced Process Innovations, LLC | All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+const cards = document.querySelectorAll('.card');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, {threshold: 0.2});
+
+cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
